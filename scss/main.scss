@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+$skin-name : 'sds';
+ 
+@if $skin-name != 'bootstrap' {
+   .e-de-ctn .e-de-bzr-button:active {
+     @if $skin-name != 'bootstrap4' {
+       box-shadow: none;
+     }
+     @if $skin-name == 'fabric' or $skin-name = 'highcontrast' {
+       border-radius: 0;
+     }
+     @if $skin-name != 'material' {
+       background-color: 'red';
+       border-color: 'red';
+       color: 'red';
+     }
+   }
+   @if $skin-name == 'highcontrast' {
+     .e-de-ctn .e-de-bzr-button:active .e-btn-icon {
+       color: 'red';
+     }
+   }
+ }
